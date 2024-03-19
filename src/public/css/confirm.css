@@ -1,0 +1,28 @@
+.confirm__table {
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 1.8rem;
+}
+
+.confirm__table--left {
+    width: 30%;
+    color: white;
+    background-color: #baa899;
+    border: 1px solid #f4f4f4;
+    padding: 2vh 0 2vh 3vw;
+}
+
+.confirm__table--right {
+    width: 70%;
+    border: 2px solid #f4f4f4;
+    padding: 2vh 0 2vh 3vw;
+}
+
+
+
+.confirm__button {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    margin: 5vh auto 0;
+}

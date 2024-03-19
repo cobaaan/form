@@ -1,0 +1,68 @@
+html {
+    font-size: 62.5%;
+    width: 100%;
+    color: #8a7868;
+}
+
+header {
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.header__ttl {
+    text-align: center;
+    font-family: "Vesper Libre", serif;
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+.ttl {
+    text-align: center;
+    font-family: "Vesper Libre", serif;
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.caution {
+    color: #ba370d;
+}
+
+.brown-button {
+    color: white;
+    background-color: #82756a;
+    border: none;
+    font-size: 1.8rem;
+    padding: 1vh 2vw 1vh 2vw;
+}
+
+.beige-button {
+    color: white;
+    background-color: #d9c6b5;
+    border: none;
+    font-size: 1.8rem;
+    padding: 1vh 2vw 1vh 2vw;
+}
+
+.white-button {
+    color: #d8c5b3;
+    background-color: #f4f4f4;
+    border: 2px solid #d8c5b3;
+    font-size: 1.8rem;
+    padding: 1vh 2vw 1vh 2vw;
+    white-space: nowrap;
+}
+
+.clear-button {
+    color: #82756a;
+    border: none;
+    font-size: 1.8rem;
+    padding: 1vh 2vw 1vh 2vw;
+    text-decoration: underline;
+}
+
+.export-button {
+    color: #82756a;
+    background-color: #edeae6;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1vh 2vw 1vh 2vw;
+}

@@ -1,0 +1,37 @@
+.thanks {
+    width: 100%;
+    position: relative;
+}
+
+.thanks__thank {
+    color: #f4f4f4;
+    font-size: 300px;
+    text-align: center;
+    font-family: "Vesper Libre", serif;
+    font-weight: 400;
+}
+
+.thanks__text {
+    color: #82756a;;
+    font-size: 30px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.thanks__button {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thanks__button--button {
+    color: #82756a;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Vesper Libre", serif;
+    font-weight: 400;
+}

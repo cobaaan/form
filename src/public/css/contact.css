@@ -1,0 +1,146 @@
+.contact__form {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.contact__form--tr {
+    padding: 3vh 0 3vh 0;
+}
+
+.contact__form--left {
+    width: 30%;
+    padding: 1.3vh 0 1.3vh 0;
+    font-size: 1.8rem;
+}
+
+.contact__form--right {
+    width: 100%;
+    padding: 1.3vh 0 1.3vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.contact__form--name-left {
+    width: 45%;
+    padding: 1vh 0 1vh 0;
+    border: none;
+    background-color: #f4f4f4;
+    color: #8a7868;
+}
+
+.contact__form--name-right {
+    width: 45%;
+    padding: 1vh 0 1vh 0;
+    border: none;
+    background-color: #f4f4f4;
+    color: #8a7868;
+}
+
+
+
+.contact__form--sex {
+    width: 70%;
+    font-size: 1.8rem;
+}
+
+.contact__form--radio {
+    accent-color: #8a7868;
+}
+
+.contact__form--sex-item {
+    position: relative;
+    right: 30px;
+}
+
+
+
+.contact__form--email {
+    width: 100%;
+    padding: 1vh 0 1vh 0 ;
+    border: none;
+    background-color: #f4f4f4;
+    color: #8a7868;
+}
+
+
+
+.contact__form--tel {
+    width: 30%;
+    padding: 1vh 0 1vh 0;
+    border: none;
+    background-color: #f4f4f4;
+    color: #8a7868;
+    text-align: center;
+}
+
+
+
+
+.contact__form--address {
+    width: 100%;
+    padding: 1vh 0 1vh 0;
+    border: none;
+    background-color: #f4f4f4;
+    color: #8a7868;
+}
+
+
+
+.contact__form--category {
+    width: 50%;
+    padding: 1vh 0 1vh 0;
+    border: none;
+    background-color: #f4f4f4;
+    color: #8a7868;
+    appearance: none;
+}
+
+.contact__form--select {
+    appearance: none;
+    color: #8a7868;
+    position: relative;
+        
+}
+
+.contact__form--select::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #8a7868 transparent transparent transparent;
+    position: absolute;
+    top: 60%;
+    left: 300px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.contact__form--option {
+    color: #8a7868;
+    font-size: 100px;
+}
+
+
+
+.contact__form--content {
+    vertical-align: top;
+}
+
+.contact__form--textarea {
+    width: 100%;
+
+    padding: 1vh 0 1vh 0;
+    border: none;
+    background-color: #f4f4f4;
+    color: #8a7868;
+}
+
+
+
+.contact__button {
+    text-align: center;
+    margin-top: 3vh;
+}
