@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\FormController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+Route::get('/', [FormController::class, 'contact']);
+Route::get('/confirm', [FormController::class, 'confirm']);
+Route::get('/thanks', [FormController::class, 'thanks']);
+Route::get('/admin', [FormController::class, 'admin']);
+Route::get('/register', [FormController::class, 'register']);
+Route::get('/login', [FormController::class, 'login']);
