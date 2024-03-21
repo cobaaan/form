@@ -1,3 +1,7 @@
+header {
+    padding: 30px 0 30px 0;
+}
+
 .header__item {
     display: flex;
     justify-content: center;
@@ -10,6 +14,9 @@
     top: 25%;
 }
 
+.ttl {
+    padding: 30px 0 30px;
+}
 
 .form {
     width: 1300px;
@@ -163,9 +170,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .space__pagenate {
-
+    border-radius: 10px;
 }
 
+.space__pagenate.active {
+    background-color: #82756a;
+}
+
+.pagination a {
+    border-radius: 10px;
+}
 
 
 .table {
@@ -183,20 +197,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
     padding: 1vh 0 1vh 0;
 }
 
-tr {
+.tr {
     width: 1300px;
     display: flex;
     justify-content: space-between;
 }
 
-th {
+.th {
     text-align: left;
     line-height: 45px;
     color: white;
     font-size: 1.8rem;
 }
 
-td {
+.td {
     text-align: left;
     line-height: 45px;
     font-size: 1.8rem;
@@ -225,3 +239,68 @@ td {
     width: 10%;
     margin-right: 5%;
 }
+
+
+
+.modal {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #baa899;
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.modal__btn--back {
+    margin: 2vh 3vw 3vh 0;
+    width: 900px;
+    text-align: right;
+}
+
+.modal__btn--back-btn {
+    width: 50px;
+    height: 50px;
+    color: #baa899;
+    font-size: 4rem;
+    margin: 0 auto;
+    background: none;
+    border: 1px solid #baa899;
+    border-radius: 50%;
+}
+
+.modal__table {
+    width: 1000px;
+}
+
+.modal__table--tr {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5vh 0 1.5vh 0;
+}
+
+.modal__table--th {
+    width: 20%;
+    color: #82756a;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.modal__table--td {
+    width: 50%;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-right: 10%;
+}
+
+.modal__btn--delete {
+    width: 1000px;
+    text-align: center;
+    margin: 8vh 0 6vh;
+}
+
+.modal__btn--delete-btn {}

@@ -22,6 +22,13 @@ Route::get('/', function () {
 Route::get('/', [FormController::class, 'contact']);
 Route::get('/confirm', [FormController::class, 'confirm']);
 Route::get('/thanks', [FormController::class, 'thanks']);
+
 Route::get('/admin', [FormController::class, 'admin']);
+Route::post('/admin/close', [FormController::class, 'admin']);
+Route::post('/admin/delete', [FormController::class, 'adminDelete']);
+Route::post('/admin/search', [FormController::class, 'adminsearch']);
+
 Route::get('/register', [FormController::class, 'register']);
 Route::get('/login', [FormController::class, 'login']);
+
+Route::post('/modal', [FormController::class, 'modal']);

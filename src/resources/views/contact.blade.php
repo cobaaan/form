@@ -75,5 +75,6 @@
                 <button class="brown-button">確認画面</button>
             </div>
         </form>
+
 </body>
 @endsection
