@@ -19,11 +19,11 @@
     <h2 class="ttl">Register</h2>
 
     <div class="login">
-        <form action="" method="">
+        <form action="/register" method="post">
             @csrf
             <div class="login__email">
                 <h2 class="login__text">お名前</h2>
-                <input class="login__input" type="text" name="name" placeholder="　　例：田中　太郎">
+                <input class="login__input" type="text" name="name"  value="{{ old('name') }}" placeholder="　　例：田中　太郎">
             </div>
             <div class="login__email">
                 <h2 class="login__text">メールアドレス</h2>

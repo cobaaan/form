@@ -144,3 +144,17 @@
     text-align: center;
     margin-top: 3vh;
 }
+
+
+
+.message__error {
+    font-size: 1.8rem;
+}
+
+.message__error--left {
+    width: 45%;
+}
+
+.message__error--right {
+    width: 45%;
+}

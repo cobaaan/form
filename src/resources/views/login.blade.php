@@ -19,7 +19,7 @@
     <h2 class="ttl">Login</h2>
 
     <div class="login">
-        <form action="" method="">
+        <form action="/login" method="post">
             @csrf
             <div class="login__email">
                 <h2 class="login__text">メールアドレス</h2>

@@ -7,19 +7,27 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Contact;
 
+use App\Http\Requests\ContactRequest;
+use App\Http\Requests\CategoryRequest;
+
 class FormController extends Controller
 {
     public $showModal = false;
 
     public function contact(){
-        return view('contact');
+        $contacts = Contact::all();
+        $categories = Category::all();
+        return view('contact', compact('contacts', 'categories'));
     }
     
-    public function confirm(){
-        return view('confirm');
+    public function confirm(ContactRequest $request){
+        $requests = $request->only(['first_name', 'last_name', 'gender', 'email', 'tell', 'tell2', 'tell3', 'address', 'address2', 'category_id', 'detail']);
+        return view('confirm', compact('requests'));
     }
 
-    public function thanks(){
+    public function thanks(Request $request){
+        $requests = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tell', 'address', 'building', 'detail']);
+        Contact::create($requests);
         return view('thanks');
     }
         
