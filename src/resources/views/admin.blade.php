@@ -9,7 +9,7 @@
 <header>
     <div class="header__item">
         <a href=""><h1 id="title" class="header__ttl">FashionablyLate</h1></a>
-        <form action="" method="">
+        <form action="/logout" method="post">
             @csrf
             <button class="header__button white-button">logout</button>
         </form>
@@ -22,7 +22,7 @@
     <form action="/admin/search" method="post">
         <div class="form">
             @csrf
-            <input class="form__text" type="text" name="" placeholder="　名前やメールアドレスを入力してください" value="">
+            <input class="form__text" type="text" name="text" placeholder="　名前やメールアドレスを入力してください" value="">
 
             <div class="form__gender" >
                 <select class="form__gender--select" name="gender">
@@ -36,14 +36,16 @@
             <div class="form__category">
                 <select class="form__category--select" name="category" placeholder="　お問い合わせの種類">
                     <option value="">お問い合わせの種類</option>
-                    @foreach($categories as $categorie)
-                        <option value="$categorie['content']">{{ $categorie['content'] }}</option>
-                    @endforeach
+                    <option value="1">1. 商品のお届けについて</option>    
+                    <option value="2">2. 商品の交換について</option>    
+                    <option value="3">3. 商品トラブル</option>    
+                    <option value="4">4. ショップへのお問い合わせ</option>    
+                    <option value="5">5. その他</option>    
                 </select>
             </div>
 
             <div class="form__date">
-                <input class="form__date--input" type="date" value="" placeholder="年/月/日">
+                <input class="form__date--input" type="date" name="date" value="" placeholder="年/月/日">
             </div>
 
             <button class="form__search brown-button">検索</button>
@@ -57,6 +59,7 @@
             <button class="export-button">エクスポート</button>
         </div>
         <div class="space__pagenate">
+
             {{ $contacts->links('vendor.pagination.tailwind') }}
         </div>
     </div>
@@ -96,6 +99,7 @@
                             <input type="hidden" name="building" value="{{ $contact['building'] }}">
                             <input type="hidden" name="category" value="{{ $contact['category']['content'] }}">
                             <input type="hidden" name="detail" value="{{ $contact['detail'] }}">
+                            <input type="hidden" name="id" value="{{ $contact['id'] }}">
                             <button class="white-button">詳細</button>
                         </form>
                     </td>
@@ -160,6 +164,7 @@
         <form action="/admin/delete" method="post">
             @csrf
             <div class="modal__btn--delete">
+                <input type="hidden" name="id" value="{{ $requests['id'] }}">
                 <button class="modal__btn--delete-btn red-button">削除</button>
             </div>
         </form>

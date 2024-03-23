@@ -24,22 +24,63 @@ class Contact extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
-
-    public function scopeDateSearch($query, $created_at) {
-        if(!empty($created_at)) {
-            $query->where('created_at', $created_at);
+/*
+    public function scopeFirstNameSearch($query, $text) {
+        if(!empty($text)) {
+            $query->where('first_name', 'LIKE', "%{$text}%");
         }
     }
 
-    public function scopeCategorySearch($query, $content) {
-        if(!empty($content)) {
-            $query->where('content', $content);
+    public function scopeLastNameSearch($query, $text) {
+        if(!empty($text)) {
+            $query->where('last_name', 'LIKE', "%{$text}%");
         }
     }
 
-    public function scopeKeywordSearch($query, $keyword) {
-        /*if(!empty($keyword)) {
-            $query->where('content', 'like', '%'. $keyword . '%');
-        }*/
+    public function scopeEmailSearch($query, $text) {
+        if(!empty($text)) {
+            $query->where('email', 'LIKE', "%{$text}%");
+        }
+    }
+
+    public function scopeGenderSearch($query, $gender) {
+        if(!empty($gender)) {
+            $query->where('gender', $gender);
+        }
+    }
+
+    public function scopeCategorySearch($query, $category) {
+        if(!empty($category)) {
+            $query->where('category_id', $category);
+        }
+    }
+
+    public function scopeDateSearch($query, $date) {
+        if(!empty($date)) {
+            $query->whereDate('created_at', $date);
+        }
+    }
+*/
+    public function scopeAllSearch($query, $request) {
+        $text = $request->input('text');
+
+        $gender = $request->input('gender');
+        $category = $request->input('category');
+        $date = $request->input('date');
+
+        if(!empty($text)) {
+            $query->where('first_name', 'LIKE', "%{$text}%")
+            ->orWhere('last_name', 'LIKE', "%{$text}%")
+            ->orWhere('email', 'LIKE', "%{$text}%");
+        }
+        if(!empty($gender)) {
+            $query->where('gender', $gender);
+        }
+        if(!empty($category)) {
+            $query->where('category_id', $category);
+        }
+        if(!empty($date)) {
+            $query->whereDate('created_at', $date);
+        }
     }
 }

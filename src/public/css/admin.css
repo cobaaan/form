@@ -248,7 +248,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background-color: white;
     border: 1px solid #baa899;
     position: fixed;
-    top: 10vh;
+    top: 2vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;

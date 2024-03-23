@@ -33,6 +33,7 @@ class FormController extends Controller
         
     public function admin(){
         $contacts = Contact::Paginate(7);
+        //$contacts = Contact::all();
         $categories = Category::all();
         $showModal = null;
         return view('admin', compact('contacts', 'categories', 'showModal'));
@@ -48,22 +49,35 @@ class FormController extends Controller
     }
 
     public function adminsearch(Request $request){
-        $contacts = Contact::with('category')->CategorySearch($request->content)->get();
+        //$contacts = Contact::Paginate(7);
+        //$ssr = Contact::AllSearch($request)->get();
+        //$contacts = $ssr->paginate(7);
+        $contacts = Contact::AllSearch($request)->get()->paginate(7);
+        //$contacts = Contact::Paginate(7)->withQueryString();
+        //$contacts = Contact::Paginate(7);
+        //$contacts = $contacts->paginate(7);
+
+        
+        //$contacts = Contact::AllSearch($request)->get();
         $categories = Category::all();
         $showModal = null;
+        $requests = $request->all();
+        return view('admin', compact('requests','contacts', 'categories', 'showModal'));
+    }
+
+    public function adminDelete(Request $request){
+        $showModal = null;
+        $categories = Category::all();
+        $contacts = Contact::all();
+        Contact::find($request->id)->delete();
         return view('admin', compact('contacts', 'categories', 'showModal'));
     }
 
-    public function adminDelete(){
-        $showModal = null;
-        return view('admin', compact('showModal'));
-    }
-
     public function register(){
-        return view('register');
+        return view('auth.register');
     }
         
     public function login(){
-        return view('login');
+        return view('auth.login');
     }
 }
