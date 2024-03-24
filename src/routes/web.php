@@ -25,10 +25,12 @@ Route::post('/confirm', [FormController::class, 'confirm']);
 Route::post('/thanks', [FormController::class, 'thanks']);
 
 Route::get('/admin', [FormController::class, 'admin']);
+Route::post('/admin', [FormController::class, 'admin']);
 Route::post('/admin/close', [FormController::class, 'admin']);
 Route::post('/admin/delete', [FormController::class, 'adminDelete']);
-Route::post('/admin/search', [FormController::class, 'adminsearch']);
+Route::post('/admin/search', [FormController::class, 'adminSearch']);
+Route::get('/admin/search', [FormController::class, 'adminSearch']);
 
-
+Route::post('/postCSV', [FormController::class, 'postCSV']);
 
 Route::post('/modal', [FormController::class, 'modal']);

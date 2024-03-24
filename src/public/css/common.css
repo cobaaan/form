@@ -6,6 +6,7 @@ html {
 
 header {
     border-bottom: 2px solid #f4f4f4;
+    margin: 0 auto;
 }
 
 .header__ttl {
