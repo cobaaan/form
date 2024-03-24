@@ -1,15 +1,15 @@
 # アプリケーション名
 
 ## 環境構築
-$ git clone git@github.com:coachtech-material/laravel-docker-template.git
-$ mv laravel-docker-template form
-$ git remote set-url origin git@github.com:cobaaan/form.git
-$ docker-compose up -d --build
-$ docker-compose exec php bash
-$ composer install
-$ php artisan make:migration create_contacts_table
-$ php artisan make:migration create_categories_table
-$ php artisan migrate
+$ git clone git@github.com:coachtech-material/laravel-docker-template.git  
+$ mv laravel-docker-template form  
+$ git remote set-url origin git@github.com:cobaaan/form.git  
+$ docker-compose up -d --build  
+$ docker-compose exec php bash  
+$ composer install  
+$ php artisan make:migration create_contacts_table  
+$ php artisan make:migration create_categories_table  
+$ php artisan migrate  
 
 ## 使用技術(実行環境)
 Laravel Framework 8.83.8  
